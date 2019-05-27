@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="estilos.css">
+       <title>Credito Auto</title>
+    </head>
+    <body>
+       <div class="contenedor">
+            <h1>Formulario para credito de auto</h1>
+           <form action="" class="formulario" id="formulario" name="formulario">
+               <div class="contenedor-inputs">
+                   Cliente: <input type="text"  id="nombre" name="nombre" placeholder="nombre">
+                 
+               </div>
+               <div class="auto">
+                   Auto:
+                    <select id="Autos">
+                        <option value="jetta">jetta</option>
+                        <option value="golf">golf</option>
+                        <option value="gol">gol</option>
+                        <option value="toureg">toureg</option>
+                        <option value="jetta_clasico">jetta clasico</option>
+                    </select>
+                    Modelo: <input type="text"  id="modelo" name="modelo" >
+               </div>
+
+               <div class="pagos">
+                    fecha: <input type="date" id="fecha" name="fecha">
+                    importe: <input type="number"  id="importe" name="importe">
+                    Enganche: <input type="number" min="0" max="100" class="enganche" id="enganche" name="enganche"><br>
+                    importe enganche: <input type="text" id="importeEnganche" readonly>
+                    Tasa: <input type="number" min="0" max="100"  id="tasa" name="tasa"><br>
+                    Plazos: <input type="number"  id="plazos" name="plazos">
+                    Saldo: <input type="text" id="saldo" readonly>
+               </div>
+
+               <div class="boton">
+                   <input type="button" id="calcular" onclick="calcularDatos()" name="calcular" value="calcular">
+               </div>
+               
+           </form>
+       </div>
+       <div id = "tabla"></div>
+       <script src="moment.js"></script>
+       <script src="credito.js"></script>
+    </body>
+</html>
